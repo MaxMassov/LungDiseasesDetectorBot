@@ -1,6 +1,6 @@
 from MessageStylist import *
 
-BOT_TOKEN = "6128524344:AAHF3UpLnuRIHaifcmQi2Yj_i_Lpl0wjXk4"
+BOT_TOKEN = ""
 TELEGRAM_URL = f"https://api.telegram.org/bot{BOT_TOKEN}/"
 FILE_URL = f"https://api.telegram.org/file/bot{BOT_TOKEN}/"
 USER_URL = "tg://user?id="
