@@ -34,10 +34,10 @@ def start_bot(request):
             file = {}
         elif path['message'].get("document") is not None:
             file = path['message'].get("document")
-            text = ""#(path['message'].get("caption") if path['message'].get("caption") is not None else "")
+            text = ""
         elif path['message'].get("photo") is not None:
             file = path['message']["photo"][-1]
-            text = ""#(path['message'].get("caption") if path['message'].get("caption") is not None else "")
+            text = ""
         else:
             return send_message(chat_id, MAIN_ERROR, markup=MAIN_KEYBOARD)
 
@@ -63,30 +63,6 @@ def start_bot(request):
                                                                  session=0, query_type="/" + text.split(" ")[0])
 
         return globals()[COMMUTATOR[session]](chat_id, file=file, text=text, session=session, query_type=query_type)
-
-        '''
-        USER:
-            id
-            is_bot
-            first_name
-            last_name
-            username
-            language_code
-
-        MESSAGE:
-            text
-            entities
-            animation
-            audio
-            document
-            photo
-            sticker
-            video
-            video_note
-            voice
-            caption
-            caption_entities
-        '''
 
     except Exception as ex:
         print(f"Error: {ex}")

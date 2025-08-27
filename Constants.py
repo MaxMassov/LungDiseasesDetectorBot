@@ -1,6 +1,6 @@
 from MessageStylist import *
 
-BOT_TOKEN = "6128524344:AAHF3UpLnuRIHaifcmQi2Yj_i_Lpl0wjXk4"
+BOT_TOKEN = ""
 TELEGRAM_URL = f"https://api.telegram.org/bot{BOT_TOKEN}/"
 FILE_URL = f"https://api.telegram.org/file/bot{BOT_TOKEN}/"
 USER_URL = "tg://user?id="
@@ -9,13 +9,13 @@ DB_NAME = "Users_data.db"
 USERS_TABLE = "Users"
 
 MODEL_LIB = 'NVIDIA/DeepLearningExamples:torchhub'
-PRETRAIND_MODEL = 'nvidia_efficientnet_b4'#'nvidia_resnet50'
+PRETRAIND_MODEL = 'nvidia_efficientnet_b4'
 MODEL_PATH = ""
-MODEL_NAME = "Efficientnet_b4_model_8_20230507_181213"#"model_5_20230506_122104"
+MODEL_NAME = "Efficientnet_b4_model_8_20230507_181213"
 THRESHOLD = 0.8
 
 COMMANDS = {'/info': "info",
-            }#'/check_the_x_ray': "checkTuberculosis",
+            }
 
 COMMUTATOR = {
             0: "handleFile",
